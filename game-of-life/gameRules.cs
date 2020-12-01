@@ -5,16 +5,16 @@ namespace gameoflife
 	public class gameRules
 	{
 		public int isAlive (int wasAlive, int count) {
-			if (wasAlive && count<2) {
+			if (wasAlive == 1 && count<2) {
 				return 0;
 			}
-			if (wasAlive && (count==2 || count == 3)) {
+			if (wasAlive == 1 && (count==2 || count == 3)) {
 				return 1;
 			}
-			if (wasAlive && count>=3) {
+			if (wasAlive == 1 && count>=3) {
 				return 0;
 			}
-			if (!wasAlive && count == 3) {
+			if (wasAlive == 0 && count == 3) {
 				return 1;
 			} 
 			else {

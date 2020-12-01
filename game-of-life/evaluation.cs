@@ -24,6 +24,7 @@ namespace gameoflife
               		if (!((y-1) < 0) && !((x-1) < 0)) {
               			count = count + grid[x-1,y-1];
               		}
+              		grid[x, y] = isAlive (grid[x, y], count);
 				}
 			}
 		}
