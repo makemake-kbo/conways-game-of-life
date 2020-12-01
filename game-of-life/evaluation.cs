@@ -32,7 +32,7 @@ namespace gameoflife
 				for (int y = 0; y < grid.GetLength(1); y++) {
 					Console.Write(string.Format("{0} ", grid[x, y]));
 				}
-				Console.Write(Environment.NewLine + Environment.NewLine);
+				Console.Write(Environment.NewLine);
 			}
 		}
 	}
