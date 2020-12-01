@@ -4,21 +4,21 @@ namespace gameoflife
 {
 	public class gameRules
 	{
-		public bool isAlive (bool wasAlive, int count) {
+		public int isAlive (int wasAlive, int count) {
 			if (wasAlive && count<2) {
-				return false;
+				return 0;
 			}
 			if (wasAlive && (count==2 || count == 3)) {
-				return true;
+				return 1;
 			}
 			if (wasAlive && count>=3) {
-				return false;
+				return 0;
 			}
 			if (!wasAlive && count == 3) {
-				return true;
+				return 1;
 			} 
 			else {
-				return true;
+				return 1;
 			}
 		}
 		public static int[,] grid = new int[,] {
