@@ -11,11 +11,13 @@ namespace gameoflife
 			while (true) 
 			{
 				evaluation.displayGrid (gameRules.grid);
-				Thread.Sleep(1000);
+				Thread.Sleep (300);
 				for (int i = 0; i < 128; i++) 
 				{
-					Console.Write(Environment.NewLine);
+					Console.Write (Environment.NewLine);
 				}
+
+				evaluation.evaluateGrid (gameRules.grid);
 			}
 		}
 	}
