@@ -8,7 +8,7 @@ namespace gameoflife
 			if (wasAlive == 1 && count<2) {
 				return 0;
 			}
-			if (wasAlive == 1 && (count==2 || count == 3)) {
+			if (wasAlive == 1 && (count == 3)) {
 				return 1;
 			}
 			if (wasAlive == 1 && count>=3) {

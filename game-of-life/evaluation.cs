@@ -40,7 +40,13 @@ namespace gameoflife
 		public static void displayGrid(int[,] grid) {
 			for (int x = 0; x < grid.GetLength(0); x++) {
 				for (int y = 0; y < grid.GetLength(1); y++) {
-					Console.Write (string.Format("{0} ", grid[x, y]));
+					if (grid[x, y] == 1) 
+					{
+						Console.Write ("█");
+					}
+					else {
+						Console.Write ("0");
+					}
 				}
 				Console.Write (Environment.NewLine);
 			}
