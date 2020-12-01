@@ -4,7 +4,7 @@ namespace gameoflife
 {
 	public class gameRules
 	{
-		public int isAlive (int wasAlive, int count) {
+		public static int isAlive (int wasAlive, int count) {
 			if (wasAlive == 1 && count<2) {
 				return 0;
 			}

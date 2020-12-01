@@ -4,7 +4,7 @@ namespace gameoflife
 {
 	public class evaluation : gameRules
 	{
-		public void evaluateGrid(int[,] grid){
+		public static void evaluateGrid(int[,] grid){
 			for (int x = 0; x < grid.GetLength(0); x++) {
 				for (int y = 0; y < grid.GetLength(1); y++) {
 					int count = grid[x, y]
@@ -22,17 +22,16 @@ namespace gameoflife
 					if (!((y-1) < 0) && !((x-1) < 0)) {
 						count = count + grid[x-1,y-1];
 					}
-					grid[x, y] = isAlive (grid[x, y], count);
+					gameRules.grid[x, y] = isAlive (gameRules.grid[x, y], count);
 				}
 			}
 		}
 
-		public void displayGrid(int[,] grid) {
+		public static void displayGrid(int[,] grid) {
 			for (int x = 0; x < grid.GetLength(0); x++) {
 				for (int y = 0; y < grid.GetLength(1); y++) {
 					Console.Write(string.Format("{0} ", grid[x, y]));
 				}
-				Console.Write(Environment.NewLine + Environment.NewLine);
 			}
 		}
 	}
